@@ -1,6 +1,6 @@
 from midiutil import MIDIFile
 
-degrees  = [60, 62, 64, 65, 67, 69, 71, 72]  # MIDI note number
+degrees  = [52, 52, 52, 52]  # MIDI note number
 track    = 0
 channel  = 0
 time     = 0    # In beats

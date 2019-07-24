@@ -3,9 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
 from scipy.fftpack import fft  # fourier transform
-from midiutil.MidiFile3 import MIDIFile
 
-AudioName = "sounds/c4.wav"  # Audio File
+AudioName = "sounds/c6.wav"  # Audio File
 fs, Audiodata = wavfile.read(AudioName)
 # Plot the audio signal in time
 
@@ -54,6 +53,7 @@ for i in range(len(Sxx)):
         maxFreq = f[i]
 
 print(maxFreq, maxMag, t[60])
+print( 12*np.log2(maxFreq/440) + 49 )
 
 plt.figure()
 plt.pcolormesh(t, f, 10 * Sxx)  # dB spectrogram
